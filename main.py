@@ -15,7 +15,7 @@ X = mail_data['Message']
 Y = mail_data['Category']
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, random_state=3)
 # transform the text data to feature vectors that can be used as input to the Logistic regression and 
-# converting Y_train and Y_test values as integers
+# converting Y_train and Y_test values as integer
 feature_extraction = TfidfVectorizer(min_df = 1, stop_words='english',lowercase='True')
 
 X_train_features = feature_extraction.fit_transform(X_train)
